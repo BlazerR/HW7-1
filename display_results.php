@@ -3,7 +3,8 @@
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 
     // get the rest of the data for the form
-
+     $password = filter_input(INPUT_POST, 'password', FILTER_VALIDATE_EMAIL);
+      $phone = filter_input(INPUT_POST, 'phone', FILTER_VALIDATE_EMAIL);
     // for the heard_from radio buttons,
     // display a value of 'Unknown' if the user doesn't select a radio button
 
