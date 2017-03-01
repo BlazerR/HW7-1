@@ -24,10 +24,10 @@
         <span><?php echo htmlspecialchars($email); ?></span><br>
 
         <label>Password:</label>
-        <span><!-- add PHP code here--></span><br>
+        <span><?php echo htmlspecialchars($password); ?></span><br>
 
         <label>Phone Number:</label>
-        <span></span><br>
+        <span><?php echo htmlspecialchars($phone); ?></span><br>
 
         <label>Heard From:</label>
         <span></span><br>
