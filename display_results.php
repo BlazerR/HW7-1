@@ -6,7 +6,12 @@
      $password = filter_input(INPUT_POST, 'password', FILTER_VALIDATE_PASSWORD);
       $phone = filter_input(INPUT_POST, 'phone', FILTER_VALIDATE_PHONE);
     // for the heard_from radio buttons,
-    // display a value of 'Unknown' if the user doesn't select a radio button
+      if (isset($_POST['card_type'])){
+          $card_type = $_POST['card_type'];
+      }else{
+          $card_type = "unknown";
+      }
+              // display a value of 'Unknown' if the user doesn't select a radio button
 
     // for the wants_updates check box,
     // display a value of 'Yes' or 'No'

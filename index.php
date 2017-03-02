@@ -17,7 +17,7 @@
         <br>
 
         <label>Password:</label>
-        <input type="text" name="password" value="" class="textbox">
+        <input type="password" name="password" value="" class="textbox">
         <br>
 
         <label>Phone Number:</label>
