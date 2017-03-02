@@ -17,7 +17,7 @@
         <br>
 
         <label>Password:</label>
-        <input type="password" name="password" value="" class="textbox">
+        <input type="text" name="password" value="" class="textbox">
         <br>
 
         <label>Phone Number:</label>
@@ -32,7 +32,7 @@
         Search engine<br>
         <input type="radio" name="heard_from" value="Friend">
         Word of mouth<br>
-        <input type=radio name="heard_from" value="Other">
+        <input type="radio" name="heard_from" value="Other">
         Other<br>
 
         <p>Would you like to receive announcements about new products
