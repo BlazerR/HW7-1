@@ -8,7 +8,6 @@
     $comments = $_POST['comments'];
     // for the heard_from radio buttons,
       
-      }
     // display a value of 'Unknown' if the user doesn't select a radio button
         if (isset($_POST['heard_from'])) {
 
