@@ -1,20 +1,38 @@
 <?php
     // get the data from the form
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $email = $_POST['email'];
 
     // get the rest of the data for the form
-     $password = filter_input(INPUT_POST, 'password', FILTER_VALIDATE_PASSWORD);
-      $phone = filter_input(INPUT_POST, 'phone', FILTER_VALIDATE_PHONE);
+    $password = $_POST['password'];
+    $phone = $_POST['phone'];
+    $comments = $_POST['comments'];
     // for the heard_from radio buttons,
-      if (isset($_POST['heard_from'])){
-          $card_type = $_POST['heard_from'];
-      }else{
-          $card_type = "unknown";
+      
       }
-              // display a value of 'Unknown' if the user doesn't select a radio button
+    // display a value of 'Unknown' if the user doesn't select a radio button
+        if (isset($_POST['heard_from'])) {
 
+        $heard_from = $_POST['heard_from'];
+
+    } else {
+
+        $heard_from = "Unknown";
+
+    }
+
+    
     // for the wants_updates check box,
+    
     // display a value of 'Yes' or 'No'
+    if (isset($_POST['wants_updates'])) {
+
+        $wants_updates = "Yes";
+
+    } else {
+
+        $wants_updates = "No";
+
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,16 +54,17 @@
         <span><?php echo htmlspecialchars($phone); ?></span><br>
 
         <label>Heard From:</label>
-        <span></span><br>
+        <span><?php echo $heard_from; ?></span><br>
 
         <label>Send Updates:</label>
-        <span></span><br>
+        <span><?php echo $wants_updates; ?></span><br>
 
         <label>Contact Via:</label>
         <span></span><br><br>
 
         <span>Comments:</span><br>
-        <span></span><br>        
+        <span><?php echo nl2br(htmlspecialchars($comments)); ?></span><br>  
+        <p>&nbsp;</p>      
     </main>
 </body>
 </html>
